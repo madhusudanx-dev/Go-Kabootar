@@ -86,3 +86,38 @@
     }
   };
 </script>
+
+<style scoped>
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+    display: block;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .form-control {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .input-group-addon {
+    transition: all 0.2s ease;
+  }
+
+  .input-group-addon:hover {
+    background: #e5e7eb !important;
+    transform: scale(1.05);
+  }
+
+  .has-error .form-control {
+    border-color: #ef4444 !important;
+  }
+
+  .has-error .form-control:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+  }
+</style>

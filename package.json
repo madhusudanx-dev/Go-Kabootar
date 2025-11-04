@@ -37,7 +37,7 @@
     "gokabootar": "cli.js"
   },
   "scripts": {
-    "start": "NODE_ENV=production node app.js",
+    "start": "cross-env NODE_ENV=production node app.js",
     "dev": "NODE_ENV=dev DEBUG=gokabootar:* nodemon -i app -i dist -i data app.js",
     "debug": "node --inspect app.js",
     "build": "npm run dist",
@@ -51,5 +51,8 @@
   "contributors": [
     "Ibrahim Maqsood <github.com/ibrahimmaq14>"
   ],
-  "license": "BSD-2-Clause"
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "cross-env": "^10.1.0"
+  }
 }

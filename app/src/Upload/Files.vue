@@ -106,3 +106,113 @@
     }
   };
 </script>
+
+<style scoped>
+  .upload-files {
+    width: 100%;
+  }
+
+  .empty-files-big-plus {
+    text-align: center;
+    padding: 60px 20px;
+    transition: all 0.3s ease;
+  }
+
+  .empty-files-big-plus:hover {
+    transform: scale(1.02);
+  }
+
+  .empty-files-big-plus icon {
+    color: #6366f1;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .empty-files-big-plus a {
+    color: #6366f1;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .empty-files-big-plus a:hover {
+    color: #4f46e5;
+    text-decoration: underline;
+  }
+
+  .table {
+    margin-top: 16px;
+  }
+
+  .table tr {
+    transition: all 0.2s ease;
+  }
+
+  .table tr:hover {
+    background: #f9fafb !important;
+  }
+
+  td.file-icon {
+    width: 60px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  td.btns {
+    width: 40px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  td.btns a {
+    color: #ef4444;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+    padding: 4px;
+  }
+
+  td.btns a:hover {
+    color: #dc2626;
+    transform: scale(1.2);
+  }
+
+  .progress {
+    margin-top: 8px;
+    height: 8px;
+  }
+
+  .alert-danger {
+    margin-top: 8px;
+    padding: 12px;
+  }
+
+  .form-control.input-sm {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+
+  .text-right {
+    margin-top: 16px;
+  }
+
+  .text-right .btn {
+    margin-top: 8px;
+  }
+
+  p {
+    margin-bottom: 8px;
+  }
+
+  p strong {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #1f2937;
+  }
+
+  p small {
+    color: #6b7280;
+    font-weight: 400;
+  }
+</style>

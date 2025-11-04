@@ -594,102 +594,151 @@
   }
 
   .room-toggle {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .room-code {
-    background: #fff;
-    padding: 3px 8px;
-    border-radius: 3px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%) !important;
+    border: 2px solid #7dd3fc !important;
+    color: #0369a1 !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px;
+    padding: 6px 12px;
+    border-radius: 8px;
     font-size: 14px;
     font-family: 'Courier New', monospace;
-    font-weight: bold;
     user-select: all;
-    border: 1px solid #ddd;
   }
 
   .room-messages {
-    padding: 15px;
+    padding: 20px;
+    background: #f9fafb;
   }
 
   .message-item {
-    margin-bottom: 15px;
-    padding: 10px;
+    margin-bottom: 16px;
+    padding: 16px;
     background: #fff;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+  }
+
+  .message-item:hover {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
   }
 
   .message-item.own {
-    background: #e3f2fd;
-    border-color: #90caf9;
+    background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+    border-color: #c4b5fd;
   }
 
   .message-header {
-    margin-bottom: 8px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #eee;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .message-header strong {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #1f2937;
+  }
+
+  .message-header small {
+    color: #6b7280;
+    font-size: 12px;
   }
 
   .file-share-box {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
   }
 
   .file-icon {
-    color: #5bc0de;
+    color: #6366f1;
+    flex-shrink: 0;
   }
 
   .file-info {
     flex: 1;
+    min-width: 0;
   }
 
   .file-name {
-    margin: 0 0 5px 0;
-    font-size: 14px;
+    margin: 0 0 8px 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1f2937;
+  }
+
+  .file-name strong {
+    font-family: 'Inter', sans-serif;
   }
 
   .file-message {
-    margin: 0;
-    color: #666;
-    font-size: 13px;
+    margin: 8px 0;
+    color: #6b7280;
+    font-size: 14px;
     font-style: italic;
+    line-height: 1.5;
   }
 
   .file-actions {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
+    flex-shrink: 0;
   }
 
   .file-actions .btn {
     white-space: nowrap;
+    min-width: 120px;
   }
 
   .room-upload-section {
-    margin-top: 20px;
+    margin-top: 24px;
   }
 
   .selected-files {
-    margin-top: 10px;
-    padding: 10px;
-    background: #f0f0f0;
-    border-radius: 4px;
+    margin-top: 16px;
+    padding: 16px;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+  }
+
+  .selected-files p {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #374151;
   }
 
   .selected-files ul {
-    margin: 5px 0 0 0;
-    padding-left: 20px;
+    margin: 8px 0 0 0;
+    padding-left: 24px;
+    color: #6b7280;
+  }
+
+  .selected-files li {
+    margin-bottom: 4px;
   }
 
   .download-limit {
-    margin: 5px 0 0 0;
+    margin: 8px 0 0 0;
   }
 
   .download-limit .text-danger {
-    font-weight: bold;
+    font-weight: 600;
     margin-left: 5px;
   }
 
@@ -700,24 +749,70 @@
   }
 
   .share-link {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #f5f5f5;
-    border-radius: 4px;
+    margin-top: 20px;
+    padding: 18px;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border: 2px solid #86efac;
+    border-radius: 12px;
     word-break: break-all;
   }
 
   .share-link .title {
-    font-weight: bold;
-    color: #333;
+    font-weight: 600;
+    color: #065f46;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    display: block;
   }
 
   .share-link a {
-    color: #337ab7;
+    color: #047857;
     text-decoration: none;
+    font-weight: 500;
   }
 
   .share-link a:hover {
     text-decoration: underline;
+  }
+
+  /* Upload Files Component */
+  .upload-files .empty-files-big-plus {
+    padding: 60px 20px;
+  }
+
+  .upload-files .empty-files-big-plus icon {
+    color: #6366f1;
+    margin-bottom: 16px;
+  }
+
+  .upload-files .empty-files-big-plus a {
+    color: #6366f1;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .upload-files .empty-files-big-plus a:hover {
+    color: #4f46e5;
+    text-decoration: underline;
+  }
+
+  /* Overall Process */
+  .overall-process {
+    margin-bottom: 20px;
+    padding: 16px;
+    background: #f9fafb;
+    border-radius: 12px;
+  }
+
+  .overall-process icon {
+    color: #6366f1;
+  }
+
+  /* Settings Panel */
+  .form-group label {
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
   }
 </style>

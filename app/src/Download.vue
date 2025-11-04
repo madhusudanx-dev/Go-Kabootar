@@ -230,3 +230,59 @@
     }
   }
 </script>
+
+<style scoped>
+  .download-app {
+    position: relative;
+  }
+
+  .btn-new-session {
+    position: absolute;
+    top: -60px;
+    right: 0;
+    z-index: 10;
+  }
+
+  .files tr {
+    transition: all 0.2s ease;
+  }
+
+  .files tr:hover {
+    background: #f9fafb !important;
+    transform: scale(1.01);
+  }
+
+  .file-icon {
+    width: 60px;
+    text-align: center;
+  }
+
+  .file-size {
+    color: #6b7280;
+    font-weight: 400;
+  }
+
+  .downloaded {
+    color: #10b981 !important;
+    font-size: 18px;
+  }
+
+  .btn-download-archive {
+    margin-top: -5px;
+  }
+
+  .btn-download-archive .btn {
+    margin-left: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .btn-new-session {
+      position: relative;
+      top: auto;
+      right: auto;
+      margin-bottom: 20px;
+      display: block;
+      width: 100%;
+    }
+  }
+</style>
