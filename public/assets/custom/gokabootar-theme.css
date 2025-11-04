@@ -62,7 +62,9 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background: radial-gradient(1200px 600px at 10% 10%, #8da4ff 0%, transparent 60%),
+              radial-gradient(900px 500px at 90% 20%, #f0a5ff 0%, transparent 60%),
+              linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   background-attachment: fixed;
   background-size: cover;
   color: var(--gray-800);
@@ -113,7 +115,7 @@ h4 {
   box-shadow: var(--shadow-2xl);
   backdrop-filter: blur(20px);
   position: relative;
-  max-width: 1200px;
+  max-width: 1100px;
 }
 
 /* Typography */
@@ -324,6 +326,12 @@ small {
   background: white;
 }
 
+/* Normalize panel heading button groups */
+.panel-heading .btn-group,
+.panel-heading .btn {
+  margin-top: -4px;
+}
+
 .well {
   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%) !important;
   border: 2px solid #bae6fd !important;
@@ -375,6 +383,14 @@ small {
 
 .form-group {
   margin-bottom: 20px;
+}
+
+/* Tighten label-input vertical rhythm */
+.form-group label + .form-control,
+.form-group label + .input-group,
+.input-group + small,
+.form-control + small {
+  margin-top: 8px;
 }
 
 label {
@@ -484,8 +500,7 @@ label {
 .table-hover > tbody > tr:hover {
   background: var(--gray-50) !important;
   cursor: pointer;
-  transform: scale(1.01);
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast);
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
@@ -724,7 +739,6 @@ code {
 
 .message-item:hover {
   box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
 }
 
 .message-item.own {
@@ -747,7 +761,6 @@ code {
 }
 
 #uploadBtn:hover {
-  transform: translateY(-3px) !important;
   box-shadow: var(--shadow-xl) !important;
 }
 
@@ -850,6 +863,19 @@ code {
   .btn {
     padding: 8px 16px;
     font-size: 13px;
+  }
+
+  table.table > thead > tr > th,
+  table.table > tbody > tr > td {
+    padding: 12px !important;
+  }
+
+  .room-toggle .btn-group {
+    width: 100%;
+  }
+
+  .room-toggle .btn-group .btn {
+    flex: 1 1 50%;
   }
 }
 
@@ -975,6 +1001,16 @@ a, button, input, select, textarea {
   align-items: center;
 }
 
+/* Header alignment for SVG + text */
+h1 .fa-icon {
+  width: 50px;
+  height: 50px;
+}
+h1 span {
+  display: inline-flex;
+  align-items: center;
+}
+
 /* Empty state styling */
 .empty-files-big-plus {
   text-align: center;
@@ -1014,4 +1050,34 @@ td {
 td.file-icon {
   width: 60px;
   text-align: center;
+}
+
+/* Drag & Drop overlay improvements */
+#dropHelper {
+  pointer-events: none;
+}
+.drag #dropHelper {
+  pointer-events: all;
+  backdrop-filter: blur(2px);
+}
+
+/* Improve drop helper message visibility */
+.drag #dropHelper:before {
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+}
+
+/* Form width normalization inside panels */
+.panel .form-control {
+  width: 100%;
+}
+
+/* Room toggle cleanup for tight alignment */
+.room-toggle .btn-group .btn + .btn {
+  border-left: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Compact hr used in templates */
+hr {
+  height: 0;
 }
